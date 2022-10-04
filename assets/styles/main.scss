@@ -1,0 +1,17 @@
+@import './components/variables';
+@import './components/typography';
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Jost', sans-serif;
+  color: $black;
+}
+
+.container {
+  max-width: 1442px;
+  padding: 0 16px;
+  margin: 0 auto;
+}

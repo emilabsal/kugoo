@@ -1,0 +1,23 @@
+// Colors
+$black: #282739;
+$gray200: #EAEBED;
+$gray600: #5D6C7B;
+$white: #FFFFFF;
+$purple: #6F73EE;
+$background: #F4F7FB;
+$red: #EE685F;
+$orange: #F3A712;
+$green: #75D14A;
+
+
+:export {
+  black: $black;
+  purple: $purple;
+  gray200: $gray200;
+  gray600: $gray600;
+  white: $white;
+  background: $background;
+  red: $red;
+  orange: $orange;
+  green: $green;
+}
