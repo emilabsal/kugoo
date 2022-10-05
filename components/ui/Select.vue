@@ -7,6 +7,7 @@
       :background="background"
       :color="black"
       :reverse="true"
+      size="small"
     />
   </div>
 </template>
@@ -29,7 +30,7 @@ export default {
 
 <style lang="scss" scoped>
 .select-button {
-  padding: 6px 14px;
+  padding: 0 14px;
   font-size: 14px;
   font-weight: 400;
   line-height: 20px;

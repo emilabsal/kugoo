@@ -1,17 +1,19 @@
 <template>
   <button
     v-if="!link"
-    :class="`button ${size || 'small'} ${reverse ? 'reverse' : ''} ${
+    :class="`button ${size} ${reverse ? 'reverse' : ''} ${
       transparent ? 'transparent' : ''
     }`"
     :style="
-      !transparent
-        ? `background: ${
-            background && !outline ? background : purple
-          }; color: ${color || white}; border: 1px solid ${
-            outline ? outline : background ? background : purple
-          }`
-        : `background: transparent; border: 0; color: ${color || black}`
+      !custom
+        ? !transparent
+          ? `background: ${
+              background && !outline ? background : purple
+            }; color: ${color || white}; border: 1px solid ${
+              outline ? outline : background ? background : purple
+            }`
+          : `background: transparent; border: 0; color: ${color || black}`
+        : ''
     "
   >
     <ui-icon
@@ -26,7 +28,7 @@
   <nuxt-link
     v-else
     :to="link"
-    :class="`button ${size || 'small'} ${reverse ? 'reverse' : ''} ${
+    :class="`button ${size} ${reverse ? 'reverse' : ''} ${
       transparent ? 'transparent' : ''
     }`"
     :style="
@@ -65,6 +67,10 @@ export default {
     color: String,
     size: String,
     reverse: Boolean,
+    custom: {
+      type: Boolean,
+      default: false,
+    },
     transparent: {
       type: Boolean,
       default: false,
@@ -96,10 +102,16 @@ export default {
 }
 
 .small {
-  padding: 10px 20px;
+  padding: 0 20px;
+  min-height: 32px;
+}
+
+.medium {
+  padding: 0 20px;
   font-size: 12px;
   font-weight: 400;
   line-height: 17px;
+  min-height: 40px;
 }
 
 .large {
