@@ -8,11 +8,19 @@
 export default {
   props: {
     name: String,
+    round: {
+      type: Boolean,
+      default: false,
+    },
   },
 };
 </script>
 
 <style lang="scss" scoped>
+.badge {
+  display: inline-block;
+}
+
 .round {
   border-radius: 50%;
 }

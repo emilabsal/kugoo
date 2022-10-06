@@ -1,5 +1,6 @@
 <template>
   <button
+    @click="$emit('button-click')"
     v-if="!link"
     :class="`button ${size} ${reverse ? 'reverse' : ''} ${
       transparent ? 'transparent' : ''
@@ -97,7 +98,8 @@ export default {
   user-select: none;
   border-radius: 5px;
   display: flex;
-  place-items: center;
+  align-items: center;
+  justify-content: center;
   gap: 13px;
 }
 
