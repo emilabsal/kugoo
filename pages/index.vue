@@ -27,6 +27,54 @@
       </div>
     </div>
     <products />
+    <div class="banners-mini container">
+      <banner-mini />
+      <banner-mini />
+    </div>
+    <div class="drone">
+      <div class="drone-inner container">
+        <img class="drone-image" src="~/assets/img/drone.png" alt="drone" />
+        <div class="drone-desc">
+          <ui-badge class="drone-badge sm" name="Акция" />
+          <span class="drone-title title"
+            >Бесплатная доставка электросамокатов по России до 01.09</span
+          >
+          <ui-button class="drone-link md" name="Подробнее" />
+        </div>
+      </div>
+    </div>
+    <all-categories />
+    <div class="dealer">
+      <div class="dealer-image-block">
+        <div class="dealer-test-drive">
+          <span class="dealer-test-drive-title lg-medium"
+            >Тест-драйв в Москве</span
+          >
+          <p class="dealer-test-drive-text sm">
+            Оцените все преимущества самокатов лично
+          </p>
+          <ui-button name="Подробнее" icon="arrow-right" />
+        </div>
+      </div>
+      <div class="dealer-desc">
+        <span class="dealer-desc-title title"
+          >Kugoo-Russia — первый официальный дилер Kugoo Kirin в России</span
+        >
+        <p class="dealer-desc-text md">
+          Наша цель предоставить полный ассортимент современной продукции Kugoo
+          Kirin, которая улучшает и упрощает жизнь. Стремимся подарить комфорт и
+          эмоции, поэтому помогаем с выбором и внимательно относимся к
+          сервисному обслуживанию.
+        </p>
+        <div class="dealer-get">
+          <span class="dealer-get-title sm-medium"
+            >Специализируемся исключительно на бренде Kugoo, поэтому вы
+            получите:</span
+          >
+          ul.
+        </div>
+      </div>
+    </div>
   </main>
 </template>
 
@@ -68,5 +116,63 @@ export default {
 
 .yandex-feed-text {
   color: $gray600;
+}
+
+.banners-mini {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  margin: 110px auto;
+}
+
+//drone
+.drone {
+  width: calc(100% - 60px);
+  margin: 0 30px;
+  background: radial-gradient(
+    76.7% 707.77% at 23.3% 72.57%,
+    #595959 0%,
+    #3b3e46 100%
+  );
+  border-radius: 10px;
+  position: relative;
+  margin-bottom: 87px;
+  overflow: hidden;
+}
+.drone-inner {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.drone-image {
+  position: absolute;
+  left: 30px;
+}
+
+.drone-desc {
+  max-width: 441px;
+  margin: 67px 0;
+}
+
+.drone-badge {
+  background-color: $red;
+  color: $white;
+  padding: 3px 12px;
+}
+
+.drone-title {
+  text-transform: uppercase;
+  color: $white;
+  display: block;
+  margin: 27px 0;
+}
+
+.drone-link {
+  padding: 15px 25px;
+  background-color: $white !important;
+  color: $black !important;
 }
 </style>
